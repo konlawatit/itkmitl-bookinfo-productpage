@@ -4,4 +4,14 @@ services:
     image: ghcr.io/konlawatit/bookinfo-productpage:dev
     ports:
       - "8083:9080"
+    environment:
+      DETAILS_HOSTNAME: http://details:8081
+      RATINGS_HOSTNAME: http://ratings:8080
+      REVIEWS_HOSTNAME: http://reviews:9080
+  # ratings:
+  #   image: ghcr.io/konlawatit/bookinfo-ratings:dev
+  # details:
+  #   image: ghcr.io/konlawatit/bookinfo-details:dev
+  # reviews:
+  #   image: ghcr.io/konlawatit/bookinfo-reviews:dev
 
